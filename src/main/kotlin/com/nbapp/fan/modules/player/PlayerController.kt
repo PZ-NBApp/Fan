@@ -4,7 +4,16 @@ import org.springframework.web.bind.annotation.*
 
 @RestController
 @RequestMapping("/players")
-class PlayerController(val repository:PlayerRepository)
+class PlayerController (private val playerService: PlayerService)
 {
-    fun getAll():
+    @GetMapping
+    fun getPlayers():Iterable<Player> {
+        return playerService.getPlayers()
+    }
+
+    @GetMapping("/{id}")
+    fun getPlayerById(@PathVariable id:Int): Player {
+        return playerService.getPlayerById(id)
+    }
+
 }

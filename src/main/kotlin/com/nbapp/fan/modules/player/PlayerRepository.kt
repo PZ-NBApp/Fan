@@ -1,3 +1,3 @@
 package com.nbapp.fan.modules.player
 
-interface PlayerRepository:JpaRepository<>
+interface PlayerRepository:JpaRepository<Player, Int>
