@@ -1,7 +1,6 @@
 package com.nbapp.fan.modules.game
 
 import javax.persistence.*
-import com.nbapp.adminserver.modules.team.Team
 
 @Entity
 class Game(
@@ -15,6 +14,5 @@ class Game(
 
         var hostResult: Int,
 
-        var guestResult: Int)
+        var guestResult: Int) {}
 
-}

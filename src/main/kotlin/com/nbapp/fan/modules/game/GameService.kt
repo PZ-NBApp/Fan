@@ -13,5 +13,5 @@ class GameService(private val gameRepository: GameRepository) {
     fun getGameById(id : Int): Game {
         return gameRepository.getOne(id)
     }
-    
+
 }
