@@ -3,16 +3,14 @@ package com.nbapp.fan.modules.game
 import javax.persistence.*
 
 @Entity
-class Game(
-        @Id
-        @GeneratedValue(strategy = GenerationType.IDENTITY)
-        val gameId: Int? = null,
-
+data class Game(
         val hostId: Int,
-
         val guestId: Int,
-
         var hostResult: Int,
-
-        var guestResult: Int) {}
-
+        var guestResult: Int
+)
+{
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    val gameId: Int = 0
+}
