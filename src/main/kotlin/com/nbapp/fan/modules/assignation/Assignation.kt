@@ -13,6 +13,7 @@ data class Assignation(
         @JoinColumn(name = "teamId")
         var team : Team )
 {
+    constructor():this(Player("",""),Team("","",0,0,0,0.0f)){}
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val assignationId: Int = 0

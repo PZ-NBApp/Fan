@@ -11,6 +11,7 @@ data class Player (
         val surname: String
 )
 {
+        constructor():this("",""){}
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         val playerId: Int = 0

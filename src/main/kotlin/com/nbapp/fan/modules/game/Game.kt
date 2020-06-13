@@ -15,6 +15,7 @@ data class Game(
         var guestResult: Int)
 
 {
+    constructor():this(Team("","",0,0,0,0.0f),Team("","",0,0,0,0.0f),0,0){}
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val gameId: Int = 0

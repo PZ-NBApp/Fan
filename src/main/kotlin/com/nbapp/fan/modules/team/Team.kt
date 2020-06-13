@@ -19,6 +19,9 @@ data class Team(
         var winPercentage: Float
 )
 {
+        constructor():this("","",0,0,0,0.0f){
+        }
+
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         val teamId: Int = 0
